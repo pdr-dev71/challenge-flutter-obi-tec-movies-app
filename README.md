@@ -15,7 +15,7 @@ _Time Obi.Tec_
 
 # Requisitos
 ## Contextualização
-Considere que para o módulo de filmes do **Aplicativo Obi Tec**, será desenvolvido um funcionalidade com o intuito de apresentar os filmes disponíveis atualmente. O desafio consiste em criar uma aplicação para a listagem de filmes e a possibilidade de visualizar maiores informações sobre o mesmo, atendendo aos critérios mínimos de aceitação.
+Considere que para o módulo de filmes do **Aplicativo Obi Tec**, será desenvolvido um funcionalidade com o intuito de apresentar os filmes disponíveis atualmente. O desafio consiste em criar uma aplicação para a listagem de filmes e a possibilidade de visualizar mais informações sobre o mesmo, atendendo aos critérios mínimos de aceitação.
 
 
 ## The Movie Database API
@@ -28,7 +28,7 @@ Com posse do token, é possível realizar a request para [listar](https://develo
 ## Histórias do Usuário
 - **Sendo** um usuário da Plataforma Obi Tec
 - **Quero** listar os filmes da Plataforma
-- **Para** que seja possível visualizar informações excepcionais do filme e assistir o trailer.
+- **Para** que seja possível visualizar informações adicionais do filme e assistir o trailer.
 
 ### Critérios mínimos de aceite: 
 #### Cenário: listar filmes cadastrados 
@@ -37,7 +37,7 @@ Com posse do token, é possível realizar a request para [listar](https://develo
 - **Então** abre a tela de listagem de filmes
 - **E** exibe lista dos filmes
 - **E** para cada registro exibe o thumbnail e o título do filme
-- **E** exibe um ícone para visualizar maiores informações
+- **E** exibe um ícone para visualizar mais informações
 
 #### Cenário: visualizar informações do filme
 - **Dado** que estou na listagem de filmes
@@ -61,7 +61,7 @@ Com posse do token, é possível realizar a request para [listar](https://develo
 - **Quando** clico no ícone do AppBar 'Lista de Desejos'
 - **Então** abre a tela com a listagem dos filmes favoritados
 - **E** exibe a thumbnail e título do filme
-- **E** exibe uma opção para visualizar maiores informações sobre o filme
+- **E** exibe uma opção para visualizar mais informações sobre o filme
 
 # Desejável
 - Implementação do AppBar
