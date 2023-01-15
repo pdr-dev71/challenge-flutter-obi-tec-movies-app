@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "22692855484",
+    "project_id": "movies-go-de5d6",
+    "storage_bucket": "movies-go-de5d6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:22692855484:android:a08298244cefd2cb905ab9",
+        "android_client_info": {
+          "package_name": "br.com.movies.go.movies_go"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "22692855484-ee91t8ur50q6ji7ofeqr6gbq15th57j7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2wsg0CWy6baEDkHB6cWQJjiL41r6_FX8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "22692855484-ee91t8ur50q6ji7ofeqr6gbq15th57j7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
