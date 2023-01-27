@@ -1,12 +1,18 @@
 import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_remote_config/firebase_remote_config.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:movies_go/firebase_options.dart';
+import 'package:movies_go/core/bindings/application_bindings.dart';
+import 'package:movies_go/core/ui/movies_go_app_ui_config.dart';
+import 'package:movies_go/router/router_navigation.dart';
 
 void main() async {
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await Firebase.initializeApp();
+
+  FirebaseRemoteConfig.instance.fetchAndActivate();
+
   runApp(const MyApp());
 }
 
@@ -20,8 +26,12 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return const GetMaterialApp(
+    return GetMaterialApp(
+      theme: FilmesAppUiConfig.theme,
+      initialRoute: AppRouter.splash,
       debugShowCheckedModeBanner: false,
+      initialBinding: ApplicationBindings(),
+      getPages: AppRouter.pages,
     );
   }
 }
