@@ -1,7 +1,4 @@
-# Projeto > Mural Virtual > Frontend
-
-> :heavy_exclamation_mark: **OBS**: Este repositório contempla a penas o Frontend, para execução deste faz-se necessário que o backend esteja instalado e rodando.
-
+# Projeto > Movies Go
 
 ## Índice
 
