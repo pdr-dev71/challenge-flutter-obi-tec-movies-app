@@ -4,6 +4,7 @@ import 'package:movies_go/core/ui/widgets/custom_app_bar.dart';
 import 'package:movies_go/core/ui/widgets/custom_button_widget.dart';
 import 'package:movies_go/core/ui/widgets/custom_text_form_field_widget.dart';
 import 'package:movies_go/modules/auth/signin/signin_controller.dart';
+import 'package:validatorless/validatorless.dart';
 
 class SigninPage extends GetView<SigninController> {
   const SigninPage({super.key});
@@ -42,6 +43,10 @@ class SigninPage extends GetView<SigninController> {
                   filed: true,
                   labelText: 'Email',
                   controller: emailController,
+                  validator: Validatorless.multiple([
+                    Validatorless.required('Email obrigatório'),
+                    Validatorless.email('Email inválido'),
+                  ]),
                 ),
                 const SizedBox(height: 10),
                 CustomTextFormFieldWidget(
@@ -52,6 +57,9 @@ class SigninPage extends GetView<SigninController> {
                   obscureText: true,
                   labelText: 'Senha',
                   controller: passwordController,
+                  validator: Validatorless.multiple([
+                    Validatorless.required('Senha obrigatória'),
+                  ]),
                 ),
                 const SizedBox(height: 20),
                 CustomButtom(

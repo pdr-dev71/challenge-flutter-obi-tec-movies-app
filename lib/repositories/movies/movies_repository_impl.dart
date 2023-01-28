@@ -107,9 +107,9 @@ class MoviesRepositoryImpl implements MoviesRepository {
         favoriteCollection.add(
           movie.toMap(),
         );
-        print('favoritado com sucesso');
+
         Get.snackbar(
-          'Adicinado',
+          'Adicionado',
           'Favorito adicionado com sucesso',
           backgroundColor: Colors.green,
           colorText: Colors.white,

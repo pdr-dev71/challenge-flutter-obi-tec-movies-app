@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:movies_go/core/ui/loader/loader.dart';
 import 'package:movies_go/core/ui/messages/messages.dart';
@@ -27,11 +28,11 @@ class GoogleSigninController extends GetxController
       await _googleSigninService.signinwithgoogle();
       loading(false);
       Get.offAllNamed(AppRouter.home);
-      message(
-        MessageModel.info(
-          title: 'Sucesso',
-          message: 'Bem vindo ao Movies Go',
-        ),
+      Get.snackbar(
+        'Sucesso',
+        'Bem vindo ao Movies Go',
+        backgroundColor: const Color(0xFF5FCFED),
+        colorText: Colors.white,
       );
     } catch (e, s) {
       print(e);

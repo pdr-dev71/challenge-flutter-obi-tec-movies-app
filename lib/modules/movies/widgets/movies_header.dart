@@ -45,6 +45,23 @@ class MoviesHeader extends GetView<MoviesController> {
               ),
             ),
           ),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Container(
+              height: 40,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: const Alignment(0.0, -1),
+                  end: const Alignment(0.0, 1),
+                  colors: <Color>[
+                    const Color(0xFF05133A).withOpacity(0),
+                    const Color(0xFF05133A),
+                  ],
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );

@@ -34,7 +34,7 @@ class PreAuthPage extends GetView<GoogleSigninController> {
               ),
               Expanded(child: Container()),
               Padding(
-                padding: const EdgeInsets.only(bottom: 25),
+                padding: const EdgeInsets.only(bottom: 40),
                 child: Column(
                   children: [
                     CustomButtom(
@@ -136,13 +136,69 @@ class PreAuthPage extends GetView<GoogleSigninController> {
                           ),
                         ),
                       ),
-                    )
+                    ),
+                    const SizedBox(height: 35),
+                    madeWithLove(),
                   ],
                 ),
               )
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  Widget madeWithLove() {
+    return RichText(
+      text: const TextSpan(
+        children: [
+          TextSpan(
+            text: "Made by ",
+            style: TextStyle(
+              fontFamily: 'Metropolis',
+              color: Colors.white,
+              fontSize: 15,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          TextSpan(
+            text: "Joao Pedro",
+            style: TextStyle(
+              fontFamily: 'Metropolis',
+              color: Colors.white,
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+              decoration: TextDecoration.underline,
+            ),
+          ),
+          WidgetSpan(
+            child: SizedBox(
+              width: 4,
+            ),
+          ),
+          TextSpan(
+            text: "with",
+            style: TextStyle(
+              fontFamily: 'Metropolis',
+              color: Colors.white,
+              fontSize: 15,
+              decoration: TextDecoration.underline,
+            ),
+          ),
+          WidgetSpan(
+            child: SizedBox(
+              width: 4,
+            ),
+          ),
+          WidgetSpan(
+            child: Icon(
+              Icons.favorite,
+              size: 18,
+              color: Colors.red,
+            ),
+          ),
+        ],
       ),
     );
   }

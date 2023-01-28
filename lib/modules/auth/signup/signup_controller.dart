@@ -33,6 +33,13 @@ class SignupController extends GetxController {
         _createUserFirestore(newUser, result.user!);
       });
       Get.toNamed(AppRouter.signin);
+      Get.snackbar(
+        'Conta criada com sucesso',
+        'Realize o login',
+        snackPosition: SnackPosition.TOP,
+        backgroundColor: const Color(0xFF5FCFED),
+        colorText: Colors.white,
+      );
     } on FirebaseAuthException catch (error) {
       Get.snackbar('Erro ao cadastrar', error.message!,
           snackPosition: SnackPosition.BOTTOM,

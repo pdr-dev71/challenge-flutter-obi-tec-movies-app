@@ -5,6 +5,7 @@ import 'package:movies_go/core/ui/widgets/custom_button_widget.dart';
 import 'package:movies_go/core/ui/widgets/custom_text_form_field_widget.dart';
 import 'package:movies_go/modules/auth/signin/signin_controller.dart';
 import 'package:movies_go/modules/auth/signup/signup_controller.dart';
+import 'package:validatorless/validatorless.dart';
 
 class SignupPage extends GetView<SigninController> {
   SignupPage({super.key});
@@ -39,12 +40,12 @@ class SignupPage extends GetView<SigninController> {
                   width: 300,
                 ),
                 CustomTextFormFieldWidget(
-                  hintText: 'Seu nome',
-                  fillcolor: const Color(0xFF2C3759),
-                  filed: true,
-                  labelText: 'Nome',
-                  controller: _nameController,
-                ),
+                    hintText: 'Seu nome',
+                    fillcolor: const Color(0xFF2C3759),
+                    filed: true,
+                    labelText: 'Nome',
+                    controller: _nameController,
+                    validator: Validatorless.required('Nome obrigatório')),
                 const SizedBox(height: 10),
                 CustomTextFormFieldWidget(
                   hintText: 'Seu email',
@@ -52,6 +53,10 @@ class SignupPage extends GetView<SigninController> {
                   filed: true,
                   labelText: 'Email',
                   controller: _emailController,
+                  validator: Validatorless.multiple([
+                    Validatorless.required('Email obrigatório'),
+                    Validatorless.email('Email inválido'),
+                  ]),
                 ),
                 const SizedBox(height: 10),
                 CustomTextFormFieldWidget(
@@ -62,6 +67,11 @@ class SignupPage extends GetView<SigninController> {
                   obscureText: true,
                   labelText: 'Senha',
                   controller: _passwordController,
+                  validator: Validatorless.multiple([
+                    Validatorless.required('Senha obrigatória'),
+                    Validatorless.min(
+                        8, 'Senha deve ter no mínimo 8 caracteres'),
+                  ]),
                 ),
                 const SizedBox(height: 10),
                 CustomButtom(

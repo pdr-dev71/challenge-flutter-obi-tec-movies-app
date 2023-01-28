@@ -24,12 +24,18 @@ class SigninController extends GetxController {
         password: password,
       );
       Get.offNamed(AppRouter.home);
+      Get.snackbar(
+        'Sucesso',
+        'Bem vindo ao Movies Go',
+        backgroundColor: const Color(0xFF5FCFED),
+        colorText: Colors.white,
+      );
     } on FirebaseAuthException catch (e) {
       if (e.code == 'user-not-found') {
         Get.snackbar(
           'Erro',
           'Nenhum usuário encontrado para esse email.',
-          snackPosition: SnackPosition.BOTTOM,
+          snackPosition: SnackPosition.TOP,
           backgroundColor: Colors.red,
           colorText: Colors.white,
         );
@@ -37,7 +43,7 @@ class SigninController extends GetxController {
         Get.snackbar(
           'Erro',
           'Senha incorreta para esse email.',
-          snackPosition: SnackPosition.BOTTOM,
+          snackPosition: SnackPosition.TOP,
           backgroundColor: Colors.red,
           colorText: Colors.white,
         );
